@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-flow: column;
+    font-size: 16px;
+}
+.header{
+    outline: 1px solid  gold;
+    height: 3rem;
+    text-align: center;
+}
+.container{
+    display: flex;
+    height: 100%; /*Heredamos todo el alto de la clase padre (Body)*/
+
+}
+.content{
+    outline: 1px solid  cyan;
+    flex: 1; /*ocupa todo el espacio disponible no importa el navegador */
+}
+.aside{
+    outline: 1px solid magenta;
+    flex: 0 0 25%; /*flex-grow 0 (no queremos que crezca) flex-shrink 0 (no queremos que se reduzca) flex-basis*/
+}
+.footer{
+    outline: 1px solid salmon; /*para maquetar usamos outline porque es un borde que se dibuja por fuera del elemento y no ocupa espacio. es como si estuviera superpuesto*/ 
+    height: 6rem;
+    margin-top: auto;
+}
+.menu {
+    display: flex;
+}
+.menu-item {
+    list-style: none;
+    flex: 1 ;
+    outline: 1px solid red;
+    line-height: 3rem; /* le damos la misma altura (height) que tiene definido el padre (header)*/
+    transition: flex .5s;
+}
+.menu-item:hover {
+    flex:8;
+}
